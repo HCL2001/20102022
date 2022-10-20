@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function binhPhuong(num){
+            num *= num;
+            return num;
+        }
+        document.write(binhPhuong(3) + "<br>");
+
+        function dientich(dai, rong){
+            let result = dai * rong;
+            return result;
+        }
+
+        document.write(dientich(3, 4) + "<br>");
+
+        function chuvi(r){
+            let pi = 3.14
+            let result = 2 * pi * r;
+            return result;
+        }
+
+        document.write(chuvi(4) + "<br>");
+
+        function checkKytu(c){
+            if (c > 65 && c < 101)
+                document.write("ASDasdasd")
+        }
+
+        document.write(checkKytu(3) + "<br>");
+
+        function giaithua(n){
+                let i;
+                let giai_thua = 1;
+                if (n == 0 || n == 1) {
+                    return giai_thua;
+                } else {
+                    for (i = 2; i <= n; i++) {
+                        giai_thua *= i;
+                    }
+                    return giai_thua;
+                }
+        }
+
+        document.write(giaithua(4) + "<br>")
+
+        function sth(num1, num2, num3){
+            if (num1 < num2 && num1 < num3){
+                return num1;
+            }else if(num2 < num1 && num2 < num3){
+                return num2;
+            }else
+                return num3;
+        }
+
+        document.write(sth(6,5,3));
+
+        function nguyenduong(num){
+            if (num > 0)
+                return true;
+            else
+                return false;
+        }
+
+        function swap(a, b){
+            let temp = a;
+            a = b;
+            b = temp;
+        }
+
+    </script>
+</body>
+</html>
