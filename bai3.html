@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="valueText">
+    <input type="button" id="btn01" onclick="guess(text)" value="Dich">
+    <p id="Result"></p>
+    <script>
+        var stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var chomsao = ["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        var index_stars = 0;
+        var result = "";
+        var text = document.getElementById("valueText").value;
+        function guess(string){
+            for (let i = 0; i < stars.length; i++){
+                if (string == stars[i])
+                    index_stars = i;
+                for (let j = 0; j < chomsao.length; j++){
+                    if (index_stars == j)
+                        result = chomsao[j];
+                }
+            }
+
+            if (result == ""){
+                document.write("Wrong");
+            }
+        }
+    </script>
+</body>
+</html>
